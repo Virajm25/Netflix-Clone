@@ -456,6 +456,8 @@ footer {
     line-height: 24px;
   }
 
+  
+
   .get__started__email input,
   .FAQ__get__started__email input {
     width: 100%;
@@ -544,7 +546,7 @@ footer {
 
   .feature__backgroud__video{
     width: 100%;
-    max-width: 90vw;  /* keeps video from touching screen edge */
+    max-width: 90vw;  
     height: auto;
     object-fit: contain;
     display: block;
@@ -942,17 +944,23 @@ footer {
 /* Modal content wrapper */
 .modal-content {
   position: relative;
-  width: 80%;
+  width: 90%;
   max-width: 800px;
   background: transparent;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
 }
 
 /* Trailer iframe */
 .modal-content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 450px;
+  height: 100%;
   border-radius: 10px;
   border: none;
+  display: block;
 }
 
 /* Close (X) button */
@@ -999,7 +1007,13 @@ footer {
 }
 
 .glow-divider {
+  position: relative;
+  width: 130%;
+  height: 40px;
+  background: radial-gradient(ellipse at center, rgba(176, 0, 255, 0.8) 0%, transparent 70%);
+  filter: blur(10px);
   animation: pulseGlow 3s infinite;
+  z-index: 15;
 }
 
 .glow-wrapper {
@@ -1007,5 +1021,7 @@ footer {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
+  z-index: 10;
 }
 
